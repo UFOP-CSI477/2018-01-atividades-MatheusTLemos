@@ -1,0 +1,33 @@
+h1{
+	font-family: "Arial", Helvetica, sans-serif;
+	font-size: 48;
+	font-weight: bold;
+	
+}
+
+body{
+	font-family: "Arial", Helvetica, sans-serif;
+	font-size: 14;
+	position: fixed;
+	left: 15%;
+	right: 15%;
+	text-align: left;
+}
+
+span{
+	display: block;
+}
+
+table, th, tr, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+#left, #right {
+		background: #404040;
+		position: fixed;
+		top: 0; bottom: 0;
+		width: 12.5%;
+	}
+#left { left: 0; }
+#right { right: 0; }
