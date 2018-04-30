@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Indice de Massa Corporal</title>
+	<link rel="stylesheet" type="text/css" href="imc.css">
+	<link rel="stylesheet" href="./bootstrap/bootstrap.css">
+	<script src="./jquery.js"></script>
+	<script src="./imc.js"></script>
+</head>
+<body>
+	<div id="left"></div>
+	<div id="right"></div>
+
+	<div id="center">
+
+	<h1>Indice de Massa Corporal</h1>
+	<div class="centro" id="campos">
+		<label for="altura">Altura:</label>
+		<input type="text" id="altura">
+		<label for="peso">Peso:</label>
+		<input type="text" id="peso">
+		<div id="space"></div>
+		<button class="btn" name="calcular">Calcular</button>
+	</div>
+
+	<div class="centro" id="resultados">
+		<table class="table table-bordered" id="tabela">
+			<thead class="thead thead-light">
+				<th>Resultado</th>
+				<th>Descrição</th>
+				<th>Peso ideal</th>
+			</thead>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>		
+	</div>
+	</div>
+</body>
+</html>
