@@ -1,0 +1,42 @@
+#left, #right {
+		background: #999900;
+		position: fixed;
+		top: 0; bottom: 0;
+		width: 12.5%;
+	}
+#left { left: 0; }
+#right { right: 0; }
+
+#center{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 15.5%;
+	right: 15.5%;
+}
+
+#space{
+	height: 30px;
+}
+
+#campos{
+	position:relative;
+	top: 5%;
+	width: 240px;
+}
+
+#resultados{
+	width: 500px;
+	height: 300px;
+	position: relative;
+	left: 13.5%;
+	top: 50px;
+}
+
+.centro{
+	display: inline-block;
+}
+
+#tabela tr td:first-child{
+	width: 15px;
+}

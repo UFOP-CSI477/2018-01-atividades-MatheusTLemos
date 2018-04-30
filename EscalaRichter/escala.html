@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculadora de Escala Richter</title>
+	<link rel="stylesheet" type="text/css" href="escala.css">
+	<link rel="stylesheet" href="./bootstrap/bootstrap.css">
+	<script src="./jquery.js"></script>
+	<script src="./escala.js"></script>
+</head>
+<body>
+	<div id="left"></div>
+	<div id="right"></div>
+
+	<div id="center">
+	<h1>Calculadora para a Escala Richter</h1>
+	<div class="centro" id="campos">
+	<label for="amplitude">Amplitude:</label>
+	<input type="text" name="campo" id="amplitude">
+	<label for="ondasuperficial">Horario da onda superficial:</label>
+	<input type="text" name="campo" id="ondasuperficial">
+	<label for="pressaomaxima">Horario da onda de pressão maxima:</label>
+	<input type="text" name="campo" id="pressaomaxima">
+	<div id="space"></div>
+	<button type="button" class="btn" name="calcular">Calcular</button>
+	</div>
+
+	<div class="centro" id="resultados">
+		<table class="table table-bordered" id="tabela">
+			<thead class="thead thead-light">
+				<tr>
+					<th>Magnitude</th>
+					<th>Efeitos</th>
+				</tr>
+			</thead>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	</div>
+</body>
+</html>
