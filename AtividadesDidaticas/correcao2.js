@@ -15,7 +15,7 @@ function corrigir(){
 	}else{
 		alert("Circulo incorreto");
 	}
-	if(document.getElementById("retangulo").value==1){
+	if(document.getElementById("retangulo").value==4){
 		alert("retangulo correto");
 	}else{
 		alert("Retangulo incorreto");
