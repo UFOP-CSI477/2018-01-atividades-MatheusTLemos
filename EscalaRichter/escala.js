@@ -19,7 +19,7 @@ function validar(){
 }
 
 function calcular(){
-	x=logBase10(document.getElementById('amplitude').value)+3*logBase10(8*(document.getElementById('pressaomaxima').value-document.getElementById('ondasuperficial').value))-2,92;
+	x=logBase10(document.getElementById('amplitude').value)+3*logBase10(8*(document.getElementById('pressaomaxima').value-document.getElementById('ondasuperficial').value))-2.92;
 	y=document.getElementById('tabela');
 	y.rows[1].cells[0].innerHTML = x.toFixed(1);
 	if(x<3.5){
