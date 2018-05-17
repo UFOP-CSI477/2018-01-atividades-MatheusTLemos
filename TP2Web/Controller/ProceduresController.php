@@ -18,4 +18,15 @@ class ProceduresController {
 			include "../View/CreateProcedure.php"
 		}
 	}
+	function removeProcedure($id){
+		$proc = new Procedures;
+		$result = $proc->removeProcedure($id);
+		if($result){
+			echo "Remoção realizada com sucesso";
+			include "../View/AdminArea.php"
+		}else{
+			echo "Remoção não realizada";
+			include "../View/CreateProcedure.php"
+		}
+	}
 }

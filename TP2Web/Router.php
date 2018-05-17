@@ -50,4 +50,8 @@ if ($op == 1) {
         session_destroy();
         header("../Index.php");
     }
+}else if($op==7){
+    $target = "../TP2Web/View/AdminViewProcedures.php";
+    $proc = new ProceduresController;
+    $proc->listAll($target);
 }
