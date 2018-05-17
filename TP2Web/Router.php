@@ -37,4 +37,17 @@ if ($op == 1) {
     $procedure = $_POST["procedure"];
     $testsController = new TestsController;
     $testsController->insertTest($date, $procedure);
+}else if($op==6){
+    session_start();
+    $userType= $_SESSION['type'];
+    if($userType==1){
+        $proceduresController=new ProceduresController;
+        $name=$_POST["name"];
+        $price=$_POST["price"];
+        $proceduresController->insertProcedure($name, $price);
+    }else{
+        echo "Permissão Negada";
+        session_destroy();
+        header("../Index.php");
+    }
 }

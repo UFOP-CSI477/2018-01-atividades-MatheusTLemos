@@ -7,4 +7,15 @@ class ProceduresController {
 		$list = $proc->listAll();
 		include $targetView;
 	}
+	function insertProcedure($name, $price){
+		$proc = new Procedures;
+		$result = $proc->insertProcedure($name, $price);
+		if($result){
+			echo "Inserção realizada com sucesso";
+			include "../View/AdminArea.php"
+		}else{
+			echo "Inserção não realizada";
+			include "../View/CreateProcedure.php"
+		}
+	}
 }
