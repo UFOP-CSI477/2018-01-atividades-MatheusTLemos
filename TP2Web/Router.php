@@ -1,11 +1,11 @@
 <?php
-	include './Model/Database.php';
-	include './Model/Procedures.php';
-	include './Model/Tests.php';
-	include './Model/Users.php';
-	include './Controller/ProceduresController.php';
-	include './Controller/TestsController.php';
-	include './Controller/UsersController.php';
+	include_once './Model/Database.php';
+	include_once './Model/Procedures.php';
+	include_once './Model/Tests.php';
+	include_once './Model/Users.php';
+	include_once './Controller/ProceduresController.php';
+	include_once './Controller/TestsController.php';
+	include_once './Controller/UsersController.php';
 
 	use Controller\UsersController;
 
@@ -16,4 +16,10 @@
 		$password = $_POST["password"];
 		$userController = new UsersController;
 		$userController->validateUser($email, $password);
+	}else if($op==2){
+		$name = $_POST["name"];
+		$email = $_POST["email"];
+		$password = $_POST["password"];
+		$userController = new UsersController;
+		$userController->addNewUser($name, $email, $password);
 	}

@@ -15,7 +15,7 @@ class Database {
   
   public function getDB() {
     if ($this->db === null) {
-      $db = new PDO('mysql:host=localhost;dbname=analyses', 'root', '');
+      $db = new PDO('mysql:host=localhost;dbname=analyses', 'sysanalyses', '123456');
     }
     return $db;
   }
