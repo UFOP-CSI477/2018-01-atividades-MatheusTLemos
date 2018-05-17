@@ -10,14 +10,16 @@ class UsersController {
         $users = new Users;
         $op = $users->validateUser($email, $password);
         if ($op === null || !$op) {
-            include './View/Login.php';
+            include '../TP2Web/View/Login.php';
         } else {
+            session_start();
+            $_SESSION['userData']=$op;
             if($op['type']==1){
-                include './View/AdminArea.php';
+                include '../TP2Web/View/AdminArea.php';
             }else if($op['type']==2){
-                include './View/OperatorArea.php';
+                include '../TP2Web/View/OperatorArea.php';
             }else if($op['type']==3){
-                include './View/UserArea.php';
+                include '../TP2Web/View/UserArea.php';
             }
         }
     }
@@ -26,9 +28,9 @@ class UsersController {
         $users = new Users;
         $op = $users->addNewUser($name, $email, $password);
         if ($op == false) {
-            include './View/Register.php';
+            include '../TP2Web/View/Register.php';
         } else {
-            include './Index.php';
+            include '../TP2Web/Index.php';
         }
     }
 

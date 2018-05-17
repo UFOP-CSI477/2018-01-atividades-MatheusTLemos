@@ -20,6 +20,6 @@
 		<?php endforeach ?>
 	</table>
 
-	<a href="./View/Login.php">Login</a>
+	<a href="../TP2Web/View/Login.php">Login</a>
 </body>
 </html>
