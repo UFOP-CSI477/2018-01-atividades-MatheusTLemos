@@ -20,7 +20,8 @@ class Users {
         if ($numRows == 0) {
             return null;
         } else {
-            return $query->fetch();
+            $results=$query->fetch();
+            return $results;
         }
     }
 

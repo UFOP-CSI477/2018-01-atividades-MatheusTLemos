@@ -3,6 +3,7 @@
     <head>
         <meta charset = "utf-8">
         <title>Exames Agendados</title>
+        <script type = "text/javascript" src = "../TP2Web/View/Javascript/jquery.js"></script>
         <script type = "text/javascript" src = "../TP2Web/View/Javascript/UserAuthentication.js"></script>
     </head>
     <body>

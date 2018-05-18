@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Agendar Exame</title>
+        <script type = "text/javascript" src = "../TP2Web/View/Javascript/jquery.js"></script>
         <script type="text/javascript" src="../TP2Web/View/Javascript/ScheduleAuthentication.js"></script>
     </head>
     <body>

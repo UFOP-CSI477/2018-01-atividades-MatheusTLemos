@@ -1,4 +1,4 @@
-﻿function validate(){
+function validate(){
 	$name = document.getElementById("name").value;
 	$price = document.getElementById("price").value;
 	if($name===""||name===null){

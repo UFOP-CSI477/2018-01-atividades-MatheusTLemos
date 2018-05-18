@@ -9,11 +9,11 @@ class Tests {
     protected $db = null;
 
     public function __construct() {
+        session_start();
         $this->db = Database::getInstance()->getDB();
     }
 
     public function showUserTests() {
-        session_start();
         $userData = $_SESSION['userData'];
         $userId = $userData['id'];
         $query= $this->db->prepare("SELECT procedures.name as name, tests.date as date FROM `tests`, `procedures` WHERE tests.user_id=".$userId." AND tests.procedure_id=procedures.id");
@@ -23,7 +23,6 @@ class Tests {
     }
 
     public function insertTest($date, $procedure){
-        session_start();
         $userData = $_SESSION['userData'];
         $userId = $userData['id'];
         $query=$this->db->prepare("INSERT into tests(user_id, procedure_id, date) VALUES(".$userId.", ".$procedure.", '".$date."')");

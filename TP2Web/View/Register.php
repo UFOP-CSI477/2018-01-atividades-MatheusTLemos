@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Registro</title>
+        <script type = "text/javascript" src = "../TP2Web/View/Javascript/jquery.js"></script>
 	<script type="text/javascript" src="../TP2Web/Javascript/RegisterAuthentication.js"></script>
 </head>
 <body>
