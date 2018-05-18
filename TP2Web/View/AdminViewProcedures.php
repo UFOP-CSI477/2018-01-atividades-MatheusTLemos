@@ -20,13 +20,13 @@
             </tr>
         <?php endforeach ?>
     </table>
-    <form action="../TP2Web/Router.php?op=8" onsubmit="return validate()" method="post">
+    <form action="../TP2Web/Router.php?op=8" onsubmit="return validateRemove()" method="post">
         <label for="idRemove">Remover: </label>
         <input type="number" name="id" id="idRemove">
         <input type="submit">
     </form>
         
-    <form action="../TP2Web/Router.php?op=9" onsubmit="return validate()" method="post">
+    <form action="../TP2Web/Router.php?op=9" onsubmit="return validateUpdate()" method="post">
         <label for="idUpdate">Modificar: </label>
         <input type="number" name="id" id="idUpdate" placeholder="id">
         <input type="text" name="name" id="name" placeholder="Nome">

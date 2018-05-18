@@ -56,4 +56,13 @@ if ($op == 1) {
     $name = $_POST["name"];
     $price = $_POST["price"];
     $proceduresController->modifyProcedure($id, $name, $price);
+} else if ($op == 10) {
+    $target = "../TP2Web/View/OperatorViewProcedures.php";
+    $proceduresController = new ProceduresController;
+    $proceduresController->listAll($target);
+} else if ($op == 11) {
+    $proceduresController = new ProceduresController;
+    $id = $_POST["id"];
+    $price = $_POST["price"];
+    $proceduresController->operatorModifyProcedure($id, $price);
 }
