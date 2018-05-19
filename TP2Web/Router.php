@@ -72,9 +72,46 @@ if ($op == 0) {
     $testsController = new TestsController;
     $testsController->removeTest($id);
 } else if ($op == 13) {
-    $id=$_POST["id"];
-    $date=$_POST["date"];
-    $procedureId=$_POST["procedure"];
+    $id = $_POST["id"];
+    $date = $_POST["date"];
+    $procedureId = $_POST["procedure"];
     $testsController = new TestsController;
-    $testsController->updateTest($id,$date,$procedureId);
+    $testsController->updateTest($id, $date, $procedureId);
+} else if ($op == 14) {
+    $usersController = new UsersController;
+    $usersController->adminViewUsers();
+} else if ($op == 15) {
+    $testsController = new TestsController;
+    $testsController->adminViewTests();
+} else if ($op == 16) {
+    $usersController = new UsersController;
+    $id = $_POST['id'];
+    $usersController->removeUser($id);
+} else if ($op == 17) {
+    $usersController = new UsersController;
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $type = $_POST['type'];
+    $usersController->modifyUser($id, $name, $email, $password, $type);
+} else if ($op == 18) {
+    $usersController = new UsersController;
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $type = $_POST['type'];
+    $usersController->adminCreateUser($name, $email, $password, $type);
+} else if ($op == 19) {
+    $testsController=new TestsController;
+    $id=$_POST['id'];
+    $testsController->adminRemoveTest($id);
+} else if ($op == 20) {
+    $testsController=new TestsController;
+    $id=$_POST['userId'];
+    $testsController->adminFilterTestsUser($id);
+} else if ($op == 21) {
+    $testsController=new TestsController;
+    $id=$_POST['procedureId'];
+    $testsController->adminFilterTestsProcedures($id);
 }

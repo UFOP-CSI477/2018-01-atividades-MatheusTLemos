@@ -9,7 +9,7 @@ class Procedures {
     protected $db = null;
 
     public function __construct($sessionStarted) {
-        if(!$sessionStarted){
+        if(!isset($_SESSION)){
             session_start();
         }
         $this->db = Database::getInstance()->getDB();
