@@ -12,7 +12,6 @@ class TestsController {
         $tests=new Tests;
         $result=$tests->insertTest($date, $procedure);
         if($result){
-            echo 'Inclusão realizada com sucesso';
             include '../TP2Web/View/UserArea.php';
         }else{
             include '../TP2Web/View/UserArea.php';

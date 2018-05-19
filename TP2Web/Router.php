@@ -13,8 +13,10 @@ use Controller\TestsController;
 use Controller\ProceduresController;
 
 $op = $_GET['op'];
-
-if ($op == 1) {
+if ($op == 0) {
+    session_destroy();
+    header("Location: /TP2Web/Index.php");
+} else if ($op == 1) {
     $email = $_POST["email"];
     $password = $_POST["password"];
     $userController = new UsersController;
