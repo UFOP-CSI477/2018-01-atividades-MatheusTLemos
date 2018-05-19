@@ -26,7 +26,7 @@ class Users {
     }
 
     public function addNewUser($name, $email, $password) {
-        $query = $this->db->prepare("INSERT INTO users(name, email, password, type) VALUES ('" . $name . "', '" . $email . "', '" . $password . "', 3)");
+        $query = $this->db->prepare("INSERT INTO users(name, email, password, type, created_at) VALUES ('" . $name . "', '" . $email . "', '" . $password . "', 3, CURRENT_TIMESTAMP)");
         $result = $query->execute();
         if ($result) {
             return true;

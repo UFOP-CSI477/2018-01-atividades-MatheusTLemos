@@ -21,6 +21,8 @@
                 <div class="row">
                     <a href="/TP2Web/view/CreateProcedure.php" class="btn btn-danger">Inserir novo procedimento</a>
                     <a href="/TP2Web/Router.php?op=7" class="btn btn-danger">Visualizar procedimentos</a>
+                    <a href="/TP2Web/Router.php?op=14" class="btn btn-danger">Visualizar usuarios</a>
+                    <a href="/TP2Web/Router.php?op=15" class="btn btn-danger">Visualizar exames</a>
                     <a href="/TP2Web/Router.php?op=0" class="btn btn-secondary">Logout</a>
                 </div>
                 <div class="col-lg-2"></div>

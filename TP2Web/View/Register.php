@@ -20,7 +20,7 @@
                 <div class="row jumbotron">
                     <h1>Cadastro</h1>
                 </div>	
-                <form action="./TP2Web/Router.php?op=2"  onsubmit="return validate()" method="post">
+                <form action="/TP2Web/Router.php?op=2"  onsubmit="return validate()" method="post">
                     <label for="email">Nome: </label>
                     <input type="text" id="name" name="name">
                     <label for="email">Email: </label>
@@ -28,7 +28,7 @@
                     <label for="password">Senha: </label>
                     <input type="password" id="password" name="password">
                     <input type="submit" id="submit" class="btn btn-danger">
-                    <a href="./TP2Web/Index.php" class="btn btn-secondary">Cancelar</a>
+                    <a href="/TP2Web/Index.php" class="btn btn-secondary">Cancelar</a>
                 </form>
             </div>
             <div class="col-lg-2"></div>

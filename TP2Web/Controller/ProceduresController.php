@@ -7,13 +7,13 @@ use Model\Procedures;
 class ProceduresController {
     
     function listAll($targetView) {
-        $proc = new Procedures;
+        $proc = new Procedures(FALSE);
         $list = $proc->listAll();
         include $targetView;
     }
 
     function insertProcedure($name, $price) {
-        $proc = new Procedures;
+        $proc = new Procedures(FALSE);
         $result = $proc->insertProcedure($name, $price);
         if ($result) {
             include "../TP2Web/View/AdminArea.php";
@@ -23,7 +23,7 @@ class ProceduresController {
     }
 
     function removeProcedure($id) {
-        $proc = new Procedures;
+        $proc = new Procedures(FALSE);
         $result = $proc->removeProcedure($id);
         if ($result) {
             header("Location: /TP2Web/Router.php?op=7");
@@ -33,7 +33,7 @@ class ProceduresController {
     }
 
     function modifyProcedure($id, $name, $price) {
-        $proc = new Procedures;
+        $proc = new Procedures(FALSE);
         $result = $proc->modifyProcedure($id, $name, $price);
         if ($result) {
             header("Location: /TP2Web/Router.php?op=7");
@@ -43,7 +43,7 @@ class ProceduresController {
     }
 
     function operatorModifyProcedure($id, $price) {
-        $proc = new Procedures;
+        $proc = new Procedures(FALSE);
         $result = $proc->operatorModifyProcedure($id, $price);
         if ($result) {
             header("Location: /TP2Web/Router.php?op=10");

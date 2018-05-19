@@ -67,4 +67,14 @@ if ($op == 0) {
     $id = $_POST["id"];
     $price = $_POST["price"];
     $proceduresController->operatorModifyProcedure($id, $price);
+} else if ($op == 12) {
+    $id = $_POST["id"];
+    $testsController = new TestsController;
+    $testsController->removeTest($id);
+} else if ($op == 13) {
+    $id=$_POST["id"];
+    $date=$_POST["date"];
+    $procedureId=$_POST["procedure"];
+    $testsController = new TestsController;
+    $testsController->updateTest($id,$date,$procedureId);
 }

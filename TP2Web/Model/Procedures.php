@@ -8,8 +8,10 @@ class Procedures {
 
     protected $db = null;
 
-    public function __construct() {
-        session_start();
+    public function __construct($sessionStarted) {
+        if(!$sessionStarted){
+            session_start();
+        }
         $this->db = Database::getInstance()->getDB();
     }
 
@@ -25,7 +27,7 @@ class Procedures {
         if ($userType != 1) {
             return false;
         }
-        $query = $this->db->prepare("INSERT into procedures(name, price, user_id) VALUES('" . $name . "', " . $price . ", " . $userId . ")");
+        $query = $this->db->prepare("INSERT into procedures(name, price, user_id, created_at) VALUES('" . $name . "', " . $price . ", " . $userId . ", CURRENT_TIMESTAMP)");
         $result = $query->execute();
         return $result;
     }
@@ -51,13 +53,13 @@ class Procedures {
         if (($name == "Nome" || $name == "" || $name == null) && ($price == "Preço" || $price == "" || $price == null)) {
             return false;
         } else if ($name != "Nome" && $name != "" && $name != null && ($price == "Preço" || $price == "" || $price == null)) {
-            $query = $this->db->prepare("UPDATE procedures SET name = '" . $name . "', user_id = " . $userId . " WHERE id=" . $id);
+            $query = $this->db->prepare("UPDATE procedures SET name = '" . $name . "', user_id = " . $userId . ", updated_at = CURRENT_TIMESTAMP WHERE id=" . $id);
             $query->execute();
         } else if ($price != "Preço" && $price != "" && $price != null && ($name == "Nome" || $name == "" || $name == null)) {
-            $query = $this->db->prepare("UPDATE procedures SET price = " . $price . ", user_id = " . $userId . " WHERE id=" . $id);
+            $query = $this->db->prepare("UPDATE procedures SET price = " . $price . ", user_id = " . $userId . ", updated_at = CURRENT_TIMESTAMP WHERE id=" . $id);
             $query->execute();
         } else {
-            $query = $this->db->prepare("UPDATE procedures SET name = '" . $name . "', price=" . $price . ", user_id = " . $userId . " WHERE id=" . $id);
+            $query = $this->db->prepare("UPDATE procedures SET name = '" . $name . "', price=" . $price . ", user_id = " . $userId . ", updated_at = CURRENT_TIMESTAMP WHERE id=" . $id);
             $query->execute();
         }
         return true;
@@ -73,7 +75,7 @@ class Procedures {
         if ($price == "Preço" || $price == "" || $price == null) {
             return false;
         } else {
-            $query = $this->db->prepare("UPDATE procedures SET price = " . $price . ", user_id = " . $userId . " WHERE id=" . $id);
+            $query = $this->db->prepare("UPDATE procedures SET price = " . $price . ", user_id = " . $userId . ", updated_at = CURRENT_TIMESTAMP WHERE id=" . $id);
             $query->execute();
         }
         return true;
